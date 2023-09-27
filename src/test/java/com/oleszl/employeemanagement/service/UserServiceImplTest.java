@@ -122,7 +122,6 @@ public class UserServiceImplTest {
     void getUsersByBirthDateRangeTest() {
         LocalDate fromDate = LocalDate.of(2001, 1, 1);
         LocalDate toDate = LocalDate.of(2001, 12, 31);
-        ;
         List<User> existingUsers = List.of(ModelUtils.getUserWithId());
 
         when(userRepository.findByBirthDateBetween(fromDate, toDate)).thenReturn(existingUsers);
